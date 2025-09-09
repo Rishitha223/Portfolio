@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rishitha Nukaraju — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Portfolio of Rishitha Nukaraju — laboratory science, DMPK/ADME, manufacturing, quality systems, regulatory affairs, and project coordination." />
+<style>
+:root{
+  --bg:#fffdfd; --ink:#1f2937; --muted:#6b7280;
+  --brand:#f4a7c3; --brand-ink:#7a113e; --navy:#1f2937;
+  --ring:#ffd6e8; --card:#ffffff; --line:#eef2f7; --radius:16px;
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:linear-gradient(180deg,#fffdfd,#f7fbff 40%,#fffdfd);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif}
+a{color:var(--brand-ink);text-decoration:none}
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:#ffffffd6;border-bottom:1px solid var(--line)}
+.nav .wrap{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:.3px;color:var(--navy)}
+/* Buttons: neutral style, highlight only on click */
+.btn{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#1f2937;display:inline-block;font-weight:700;cursor:pointer;transition:transform .15s ease}
+.btn:active{transform:scale(0.98)}
+/* No colored buttons */
+.btn.primary{background:#fff;color:#1f2937;border-color:var(--line)}
+.nav a.btn.primary{background:#fff;color:#1f2937;border-color:var(--line)}
+/* Click feedback */
+.btn.clicked{box-shadow:0 0 0 8px var(--ring); animation:pop .45s ease;}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+.container{max-width:1100px;margin:0 auto;padding:24px 20px}
+.section{padding:20px 0 6px 0;margin:8px 0 22px 0}
+.section h2{margin:0 0 14px 0;font-size:1.2rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--ring);display:inline-block;padding-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:0 10px 28px #93c5fd22}
+
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:28px;align-items:center;padding:34px 0}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.hero .title{font-family:'Playfair Display',serif;font-size:2.2rem;margin:0 0 6px 0;color:var(--navy)}
+.hero .tag{color:var(--muted);font-size:1rem;margin:6px 0 18px 0}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 26px 0}
+.pill,.badge{background:#ffeaf3;color:var(--brand-ink);border:1px solid var(--ring);padding:8px 12px;border-radius:999px;font-weight:700;font-size:.95rem}
+
+.hero .photo-wrap{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px #ff7cab1a,0 6px 24px #00000010}
+.hero img{width:100%;height:100%;display:block;object-fit:cover}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.gimg{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.gimg img{width:100%;height:220px;object-fit:cover;display:block}
+.gimg:hover{transform:translateY(-2px);box-shadow:0 18px 40px #00000022}
+
+.lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:1000}
+.lightbox img{max-width:92vw;max-height:86vh;border-radius:16px;box-shadow:0 30px 80px #00000077}
+.lightbox.on{display:flex}
+
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{text-align:center;padding:16px;border-radius:12px;background:#fff5fa;border:1px solid var(--ring)}
+.kpi .n{font-weight:800;font-size:1.4rem;color:var(--brand-ink)}
+footer{text-align:center;color:var(--muted);padding:34px 0 44px 0}
+.gradient{background:linear-gradient(180deg,#fff0f6,#f0f7ff)}
+.muted{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand">Rishitha Nukaraju</div>
+    <div class="links">
+      <a class="btn" href="#about">About</a>
+      <a class="btn" href="#strengths">Highlights</a>
+      <a class="btn" href="#experience">Experience</a>
+      <a class="btn" href="#projects">Case Studies</a>
+      <a class="btn" href="#skills">Skills Matrix</a>
+      <a class="btn" href="#gallery">Gallery</a>
+      <a class="btn primary" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <section class="hero">
+    <div>
+      <h1 class="title">Scientist–Operator across Lab, DMPK, Quality, Regulatory & Manufacturing</h1>
+      <p class="tag">Breadth across ADME/DMPK fundamentals, analytical bioanalysis, GMP manufacturing, quality systems, regulatory documentation, and project coordination.</p>
+      <div class="pills">
+        <span class="pill">Laboratory Science</span>
+        <span class="pill">ADME / DMPK</span>
+        <span class="pill">Manufacturing (mRNA Downstream)</span>
+        <span class="pill">QA · QC · QMS</span>
+        <span class="pill">Regulatory Affairs</span>
+        <span class="pill">Project & Stakeholder Management</span>
+      </div>
+      <div class="pills">
+        <a class="btn primary" href="mailto:nukarajurishitha@gmail.com?subject=Portfolio%20Inquiry%20for%20Rishitha%20Nukaraju" title="nukarajurishitha@gmail.com">Let’s Connect</a>
+        <a class="btn" href="#skills">View Skills Matrix</a>
+      </div>
+    </div>
+    <div class="photo-wrap"><img alt="Hero portrait" src="C:\Users\RISHITHA.NUKARAJU\Downloads\Image (2).jfif"></div>
+  </section>
+</div>
+
+<div class="gradient">
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>
+          I’m <strong>Rishitha Nukaraju</strong>, a versatile pharma professional with hands-on experience in
+          laboratory methods (qPCR, ELISA, HPLC, GC-MS), ADME/DMPK fundamentals (sample prep, non-compartmental PK analysis, exposure/PK-PD basics),
+          GMP manufacturing (IVT, chromatography, TFF), quality systems (CAPA, SOPs, batch record review),
+          and regulatory documentation (21 CFR, ISO, CLIA). I translate requirements into reliable processes and coordinate across QA, QC, PD, and manufacturing.
+        </p>
+      </div>
+    </section>
+
+    <section id="strengths" class="section">
+      <h2>Highlights & Impact</h2>
+      <div class="kpis">
+        <div class="kpi"><div class="n">15%</div><div>Documentation accuracy improvement</div></div>
+        <div class="kpi"><div class="n">12%</div><div>Dx turnaround time reduction</div></div>
+        <div class="kpi"><div class="n">Audit-Ready</div><div>FDA / CLIA / ISO</div></div>
+        <div class="kpi"><div class="n">Cross-Functional</div><div>QA · QC · PD · Mfg</div></div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="grid-2">
+        <div class="card">
+          <strong>Technician — Biomanufacturing, Downstream/mRNA</strong>
+          <div class="muted">Catalent Pharma Solutions · Madison, WI · Feb 2025 – Present</div>
+          <ul>
+            <li>Executed IVT, chromatography (affinity, IEX, SEC), TFF, and viral filtration; supported process consistency and yield.</li>
+            <li>Maintained GMP-compliant documentation; contributed to deviations/CAPAs and inspection readiness.</li>
+            <li>Coordinated with PD and Manufacturing to optimize steps and remove bottlenecks.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Clinical Laboratory Scientist — Oncology Diagnostics</strong>
+          <div class="muted">Exact Sciences · Madison, WI · Jun 2024 – Feb 2025</div>
+          <ul>
+            <li>Performed RT-qPCR, ELISA, DNA extraction; validated assays under CLIA/CAP.</li>
+            <li>Cut turnaround time by <strong>12%</strong> via workflow refinements; ensured Part 11 data integrity.</li>
+            <li>Prepared inspection-ready records; partnered with QA for continuous improvement.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Teaching Assistant — General Chemistry</strong>
+          <div class="muted">University of Wisconsin–Madison · Aug 2023 – May 2024</div>
+          <ul>
+            <li>Led lab courses for 40+ students; authored troubleshooting guides increasing scores by <strong>20%</strong>.</li>
+            <li>Emphasized safe practices, experimental design, and technical writing.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <strong>Laboratory Assistant</strong>
+          <div class="muted">Vaagdevi College of Pharmacy · 2018 – 2022</div>
+          <ul>
+            <li>QC of formulations via HPLC, HPTLC, GC-MS under ISO 17025.</li>
+            <li>Executed PK/biodistribution experiments under GLP for regulatory submissions.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Case Studies</h2>
+      <div class="grid-3">
+        <div class="card">
+          <strong>Downstream Yield Stabilization</strong>
+          <p>Optimized chromatography/TFF parameters; improved run-to-run consistency and batch documentation quality.</p>
+          <span class="badge">Manufacturing · mRNA · TFF</span>
+        </div>
+        <div class="card">
+          <strong>Audit-Ready Documentation</strong>
+          <p>Aligned SOPs and batch records to GDP/ISO 9001; increased documentation accuracy by <strong>15%</strong>.</p>
+          <span class="badge">Quality Systems · GDP</span>
+        </div>
+        <div class="card">
+          <strong>DMPK: PK Analysis & Bioanalysis Readiness</strong>
+          <p>Supported PK sample handling and <em>non-compartmental analysis</em> (Cmax, AUC, t½); coordinated LC-MS/MS bioanalytical inputs and reporting to enable decision-making.</p>
+          <span class="badge">ADME · NCA · LC-MS/MS</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills Matrix</h2>
+      <div class="grid-2">
+        <div class="card">
+          <strong>Laboratory & DMPK</strong>
+          <div class="pills">
+            <span class="badge">RT-qPCR</span><span class="badge">ELISA</span><span class="badge">DNA extraction</span>
+            <span class="badge">SDS-PAGE</span><span class="badge">HPLC</span><span class="badge">GC-MS</span><span class="badge">AKTA</span>
+          </div>
+          <div class="pills" style="margin-top:8px">
+            <span class="badge">ADME principles</span><span class="badge">Non-compartmental analysis</span>
+            <span class="badge">Phoenix WinNonlin (basics)</span><span class="badge">Sample prep / stability</span>
+            <span class="badge">LC-MS/MS bioanalysis (coordination)</span>
+          </div>
+        </div>
+        <div class="card">
+          <strong>Manufacturing • Quality • Regulatory • PM</strong>
+          <div class="pills">
+            <span class="badge">IVT</span><span class="badge">Chromatography (Affinity/IEX/SEC)</span><span class="badge">TFF</span><span class="badge">Viral Filtration</span>
+          </div>
+          <div class="pills" style="margin-top:8px">
+            <span class="badge">GMP · GLP · GDP</span><span class="badge">CAPA</span><span class="badge">SOP / BMR Review</span>
+            <span class="badge">21 CFR Parts 210/211</span><span class="badge">21 CFR Part 11</span>
+            <span class="badge">ISO 9001 · 13485 · 17025</span><span class="badge">CLIA / CAP</span>
+          </div>
+          <div class="pills" style="margin-top:8px">
+            <span class="badge">Stakeholder Communication</span><span class="badge">Scheduling / Coordination</span>
+            <span class="badge">LIMS</span><span class="badge">JDE · BMRAM · SchedulePro</span>
+            <span class="badge">MS Project</span><span class="badge">R (basics)</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <strong>Target Role Tracks</strong>
+        <div class="pills" style="margin-top:8px">
+          <span class="badge">Regulatory Affairs</span>
+          <span class="badge">QA/QC & Quality Systems</span>
+          <span class="badge">Scientist – Lab Ops / DMPK</span>
+          <span class="badge">Manufacturing (mRNA Downstream)</span>
+          <span class="badge">Project Coordination / PMO</span>
+        </div>
+        <div class="muted" style="margin-top:6px">Clear tracks keep positioning focused while showcasing breadth.</div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Photo Gallery</h2>
+      <div class="gallery">
+        <figure class="gimg"><img src="C:\Users\RISHITHA.NUKARAJU\Downloads\Image (3).jfif" alt="Group photo"></figure>
+        <figure class="gimg"><img src="C:\Users\RISHITHA.NUKARAJU\Downloads\Image.jfif" alt="UW flags"></figure>
+        <figure class="gimg"><img src="C:\Users\RISHITHA.NUKARAJU\Downloads\Image (1).jfif" alt="Graduation portrait with rose"></figure>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="grid-2">
+        <div class="card">
+          <strong>M.S., Pharmaceutical Sciences — Applied Drug Development</strong>
+          <div class="muted">University of Wisconsin–Madison · 2024</div>
+        </div>
+        <div class="card">
+          <strong>Bachelor of Pharmacy (B.Pharm)</strong>
+          <div class="muted">Vaagdevi College of Pharmacy, Warangal · 2022</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Open to roles across the pharmaceutical value chain — Regulatory Affairs, QA/QC, Scientist (Lab Ops / DMPK), Manufacturing, and Project Coordination/Management.</p>
+        <div class="pills" style="margin-top:6px">
+          <a class="btn primary" href="mailto:nukarajurishitha@gmail.com?subject=Portfolio%20Inquiry%20for%20Rishitha%20Nukaraju" title="nukarajurishitha@gmail.com">Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/rishitha-nukaraju/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Rishitha Nukaraju • Built as a single HTML file.
+    </footer>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox"><img alt="zoomed"></div>
+
+<script>
+// Lightbox
+const lb=document.getElementById('lightbox');
+document.querySelectorAll('.gimg img').forEach(img=>{
+  img.addEventListener('click',()=>{ lb.querySelector('img').src=img.src; lb.classList.add('on'); });
+});
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+
+// Year
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const id=a.getAttribute('href').slice(1);
+    const el=document.getElementById(id);
+    if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+  });
+});
+
+// Click-only highlight for buttons
+document.querySelectorAll('.btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    btn.classList.add('clicked');
+    setTimeout(()=>btn.classList.remove('clicked'), 450);
+  });
+});
+</script>
+</body>
+</html>
+
